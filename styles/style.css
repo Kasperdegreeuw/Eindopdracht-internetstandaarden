@@ -194,6 +194,7 @@ iframe {
 h2 span {
     color: #04FF00;
     display: block;
+    text-align: right;
 
 }
 
@@ -261,6 +262,7 @@ article img {
     align-items: center;
     gap: 4em;
     margin: 2% auto;
+    
 }
 
 .intro {
@@ -276,4 +278,17 @@ article img {
 
 .new1 img {
     transform: scale(1.5);
+}
+
+.start {
+    display: flex;
+    align-items: center;
+    justify-content: center ;
+}
+
+.images {
+    display: flex;
+    justify-content: center;
+    gap: 15em;
+    transform: scale(0.8);
 }
