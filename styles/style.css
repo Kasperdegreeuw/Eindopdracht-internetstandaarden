@@ -25,53 +25,25 @@
     font-style: normal;
 }
 
-
 * {
     margin: 0;
     padding: 0;
 }
 
-header img {
-    margin-left: 2em;
+body {
+    background-color: black;
 }
 
-/* Class om de navigatie zichtbaar te maken op de over ons page omdat die een witte achtergrond heeft */
-.overons nav a {
-    color: #000000;
-}
 
-/* active state in de navigatie */
-.active {
-    color: #04FF00;
-}
-
-/* Hier met een extra class gedaan omdat anders overruled de zwarte kleur het en werkt de active state niet  */
-.overons .active {
-    color: #04FF00;
-}
-
-/* Underline hover animatie  */
-nav a {
-    font-family: 'Switzer-Bold';
-    transition: all 300ms ease;
-    position: relative;
-}
-
-nav a::after {
-    content: '' ;
-    height: 2px;
-    width: 100%;
-    background-color: #04FF00;
+/* Om de h1 niet zichbaar te maken omdat ik een image als titel gebruik */
+h1 {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
     position: absolute;
-    left: 0;
-    bottom: -0.4em;
-    width: 0%;
-    transition: all 300ms ease;
-
-}
-
-nav a:hover::after {
-    width: 100%;
+    white-space: nowrap;
+    width: 1px;
 }
 
 
@@ -99,11 +71,56 @@ a {
     font-family: 'Switzer-Regular';
 }
 
+/* Header & Footer */
+
+/* active state */
+
+.active {
+    color: #04FF00;
+}
+
+/* Hier met een extra class gedaan omdat anders overruled de zwarte kleur het en werkt de active state niet  */
+.overons .active {
+    color: #04FF00;
+}
+
+/* Navigatie */
+
 /* Container om ruimte te creeren tussen de navigatie en logo */
 header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin: 0 2em
+}
+
+/* Kleur aanpassing voor nav op overons pagina */
+.overons nav a {
+    color: #000000;
+}
+
+/* Underline hover animatie  */
+nav a {
+    font-family: 'Switzer-Bold';
+    transition: all 300ms ease;
+    position: relative;
+}
+
+nav a::after {
+    content: '' ;
+    height: 2px;
+    width: 100%;
+    background-color: #04FF00;
+    position: absolute;
+    left: 0;
+    bottom: -0.4em;
+    width: 0%;
+    transition: all 300ms ease;
+
+}
+
+nav a:hover::after {
+    width: 100%;
 }
 
 /* container om de navigatie naast elkaar te krijgen */
@@ -122,23 +139,7 @@ nav a {
     color: white;
 }
 
-body {
-    background-color: black;
-}
-
-/* deze class is om dat ik een soort split color heb op mijn homepage dit is dan de top heb 100vh gebruikt zodat je dan alleen de top ziet en moet scrollen om de rest van de content te zien */
-.top {
-    height: 100vh;
-    background-color: #000000;
-    color: white;
-}
-
-/* dit is de onderkant van de split */
-.bottom {
-    height: 100vh;
-    background-color: white;
-    color: #000000;
-}
+/* Footer styling */
 
 footer {
     background-color: #000000;
@@ -184,17 +185,44 @@ footer img {
     transform: scale(1.2);
 }
 
-/* voor de iframe heb ik een max width/height toegevoegd een position en aspect ratio zodat de iframe goed in positie blijft voor verschillende devices */
-iframe {
-    max-width: 670px;
-    max-height: 390px;
-    width: 75%;
-    height: auto;
+/* Homepage */
+
+/* deze class is om dat ik een soort split color heb op mijn homepage dit is dan de top heb 100vh gebruikt zodat je dan alleen de top ziet en moet scrollen om de rest van de content te zien */
+.top {
+    height: 100vh;
+    background-color: #000000;
+    color: white;
+}
+
+/* dit is de onderkant van de split */
+.bottom {
+    height: 100vh;
+    background-color: white;
+    color: #000000;
+}
+
+/* Container voor het positionerene h2 van de tagline/slogan op homepage */
+.start {
     display: flex;
-    margin: 0 auto;
-    margin-top: 2%;
-    position: relative;
-    aspect-ratio: 16 / 9;
+    align-items: center;
+    justify-content: center ;
+}
+
+/* span voor veranderen van kleur */
+h2 span {
+    color: #04FF00;
+    display: block;
+    text-align: right;
+
+}
+
+
+/* Container voor het positioneren van de images  */
+.images {
+    display: flex;
+    justify-content: center;
+    gap: 15em;
+    transform: scale(0.8);
 }
 
 /* container om alles netjes onder elkaar te krijgen */
@@ -215,13 +243,20 @@ iframe {
     max-width: 75%;
 }
 
-/* span voor veranderen van kleur */
-h2 span {
-    color: #04FF00;
-    display: block;
-    text-align: right;
-
+/* voor de iframe heb ik een max width/height toegevoegd een position en aspect ratio zodat de iframe goed in positie blijft voor verschillende devices */
+iframe {
+    max-width: 670px;
+    max-height: 390px;
+    width: 75%;
+    height: auto;
+    display: flex;
+    margin: 0 auto;
+    margin-top: 2%;
+    position: relative;
+    aspect-ratio: 16 / 9;
 }
+
+/* Afleveringen */
 
 .afleveringen {
     color: white;
@@ -232,13 +267,14 @@ h2 span {
     margin-top: 2%;  
 }
 
-.ep1 {
+
+/* Container voor de afleveringen */
+.aflevering {
     margin: 0 auto;
     margin-top: 3em;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
     max-width: 75%;
     background-color: white;
     color: black;
@@ -248,11 +284,11 @@ h2 span {
     
 }
 
-.ep1 img {
+.aflevering img {
     border-radius: 1.2em;
 }
 
-.tekstep1 {
+.aflevering section {
     display: flex;
     text-align: left;
     flex-direction: column;
@@ -261,10 +297,29 @@ h2 span {
 }
 
 
-article img {
-    max-width: 288px;
-    max-height: 154px;
+.aflevering img {
+    max-width: 10em;
+    max-height: 10em;
 }
+
+/* Animatie player image */
+
+@keyframes borderplay {
+    0% {border-color: blue;}
+    25% {border-color: rgb(255, 0, 0);}
+    50% {border-color: rgb(255, 225, 0);}
+    75% {border-color: rgb(0, 255, 128);}
+    100% {border-color: rgb(0, 140, 255);}
+
+}
+.aflevering .play:hover {
+    border: 0.1em solid rgb(17, 0, 255);
+    border-radius: 10em;
+    animation: borderplay 5s infinite;
+    
+}
+
+/* Overons */
 
 .overons {
     background-color: white;
@@ -276,12 +331,12 @@ article img {
     margin-top: 2%; 
 }
 
-.wie {
+h2 + p {
     margin-left: 5%;
     margin-right: 5%;
 }
 
-.new1 {
+.kaart {
     display: flex;
     flex-direction: row;
     background-color: #04FF00;
@@ -292,6 +347,11 @@ article img {
     gap: 4em;
     margin: 2% auto;
     
+}
+
+.kaart img {
+    max-width: 10em;
+    max-height: 10em;
 }
 
 .intro {
@@ -305,99 +365,11 @@ article img {
     border-radius: 1.2em;
 }
 
-.new1 img {
+.kaart img {
     transform: scale(1.5);
 }
 
-.start {
-    display: flex;
-    align-items: center;
-    justify-content: center ;
-}
-
-.images {
-    display: flex;
-    justify-content: center;
-    gap: 15em;
-    transform: scale(0.8);
-}
-
-@keyframes borderplay {
-    0% {border-color: blue;}
-    25% {border-color: rgb(255, 0, 0);}
-    50% {border-color: rgb(255, 225, 0);}
-    75% {border-color: rgb(0, 255, 128);}
-    100% {border-color: rgb(0, 140, 255);}
-
-}
-.ep1 .play:hover {
-    border: 0.1em solid rgb(17, 0, 255);
-    border-radius: 10em;
-    animation: borderplay 5s infinite;
-    
-}
-
-/* Hier heb ik media inquiries gebruikt om de website responsive te maken */
-
-@media (max-width: 78em) {
-    .images {
-        transform: scale(0.6);
-    }
-}
-
-@media (max-width: 60em) {
-    .images {
-        transform: scale(0.4);
-    }
-
-    .ep1 {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-}
-
-@media (max-width: 44em) {
-    .images {
-        transform: scale(0.2);
-    }
-
-    .start {
-        font-size: 0.6em;
-    }
-
-    header {
-        transform: scale(0.7);
-        justify-content: center;
-    }
-
-    .new1 {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .new1 img {
-        margin-top: 2em;
-
-    }
-
-}
-
-@media (max-width: 28em) {
-    .start {
-        font-size: 0.4em;
-    }
-
-    .ep1 img {
-        transform: scale(0.8);
-        
-    }
-
-    header {
-        justify-content: center;
-    }
-}
-
-/* style bronnenpagina */
+/* Bronnenpagina */
 
 ol {
     margin-left: 5em;
@@ -416,3 +388,70 @@ ol a {
 ol a:hover {
     color: #04FF00;
 }
+
+
+/* Media enquiries voor het goed schalen van de website op verschillende devices */
+
+@media (max-width: 78em) {
+    .images {
+        transform: scale(0.6);
+    }
+}
+
+@media (max-width: 60em) {
+    .images {
+        transform: scale(0.4);
+    }
+
+    .aflevering {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .kaart img {
+        margin-top: 2em;
+
+    }
+
+
+}
+
+@media (max-width: 44em) {
+    .images {
+        transform: scale(0.2);
+    }
+
+    .start {
+        font-size: 0.6em;
+    }
+
+    header {
+        transform: scale(0.7);
+        justify-content: center;
+    }
+
+    .kaart {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .kaart img {
+        margin-top: 2em;
+
+    }
+
+}
+
+@media (max-width: 28em) {
+    .start {
+        font-size: 0.4em;
+    }
+
+    .aflevering img {
+        transform: scale(0.8);
+        
+    }
+}
+
+
+

@@ -1,72 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Onuitgesproken</title>
-    <link rel="stylesheet" href="styles/style.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Onuitgesproken</title>
+        <link rel="stylesheet" href="styles/style.css">
+    </head>
 
-<body>
-    <header>
-        <img src="images/logo_onuitgesproken.svg" alt="logo">
-        <nav>
-            <ul>
-                <li><a class="active" href="index.html">Home</a></li>
-                <li><a href="pages/afleveringen.html">Afleveringen</a></li>
-                <li><a href="pages/overons.html">Over ons</a></li>
-            </ul>
-        </nav>
+    <body>
+        <header>
+            <h1>Onuitgesproken</h1>
+            <img src="images/logo_onuitgesproken.svg" alt="logo">
+            <nav>
+                <ul>
+                    <li><a class="active" href="index.html">Home</a></li>
+                    <li><a href="pages/afleveringen.html">Afleveringen</a></li>
+                    <li><a href="pages/overons.html">Over ons</a></li>
+                </ul>
+            </nav>
 
-    </header>
-    <main>
-        <div class="top">
-            <div class=images>
-                <img src="images/startimg/1.png" alt="Foto resten MH17">
-                <img src="images/startimg/2.png" alt="Hek met bord entering area 51">
-                <img src="images/startimg/3.png" alt="Covid-19 wordt vast gehouden aan touwtjes">
+        </header>
+        <main>
+            <!-- Ik heb hier een div gebruikt omdat dit puur voor vormgeving is om de achtergrond van het bovenste gedeelte zwart te maken -->
+            <div class="top">
+                <!-- container om de images op een rij te zetten -->
+                <div class=images>
+                    <img src="images/startimg/1.png" alt="Foto resten MH17">
+                    <img src="images/startimg/2.png" alt="Hek met bord entering area 51">
+                    <img src="images/startimg/3.png" alt="Covid-19 wordt vast gehouden aan touwtjes">
+
+                </div>
+                <!-- Ik moest hier de h2 in een container zetten omdat als ik de container op de h2 zelf zou zetten dan werkte de span die ik een block element heb gemaakt niet goed dus het is alleen voor de vormgeving en heeft verder geen andere betekenis -->
+                <div class="start">
+                    <!-- span om een andere kleur te geven aan de tekst -->
+                    <h2>9 VAN DE 10 REPTIELEN <span>RADEN ONS AAN</span> </h2>
+                </div>
+                <div class=images>
+                    <img src="images/startimg/4.png" alt="Film set met astronaut en maan">
+                    <img src="images/startimg/5.png" alt="Schip vaart richting de bermuda driehoek">  
+                </div>
 
             </div>
-            <section class="start">
-                <h2>9 VAN DE 10 REPTIELEN <span>RADEN ONS AAN</span> </h2>
-            </section>
-            <div class=images>
-                <img src="images/startimg/4.png" alt="Film set met astronaut en maan">
-                <img src="images/startimg/5.png" alt="Schip vaart richting de bermuda driehoek">  
+                    
+            <!-- Tweede helft van de homepage met een andere achtergrond kleur -->
+            <div class="bottom">
+                    <section class="trailer">
+                        <h2>Introductie</h2>
+                        <p>Wij zijn Onuitgesproken, dé conspiracy-podcast die je niet meer loslaat. Benieuwd? Bekijk de korte trailer en ontdek wat je te wachten staat!</p>
+                        <!-- op het moment van inlevern was de trailer nog niet klaar daarom zit er nu een andere video in de iframe -->
+                        <iframe src="https://www.youtube.com/embed/8JeoxrJ0mI4?si=e7f-mHI2zHdYIId2"
+                            title="YouTube video player"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </section>
             </div>
-
-        </div>
-                
-        
-        <div class="bottom">
-                <section class="trailer">
-                    <h2>Introductie</h2>
-                    <p>Wij zijn Onuitgesproken, dé conspiracy-podcast die je niet meer loslaat. Benieuwd? Bekijk de
-                        korte
-                        trailer en ontdek wat je te wachten staat!</p>
-                    <!-- op het moment van inlevern was de trailer nog niet klaar daarom zit er nu een andere video in de iframe -->
-                    <iframe src="https://www.youtube.com/embed/8JeoxrJ0mI4?si=e7f-mHI2zHdYIId2"
-                        title="YouTube video player"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </section>
-        </div>
-    </main>
-    <footer>
-        <div>
-            <a href="https://www.instagram.com/"><img src="images/footerlogo's/instagram_215px.svg" alt="Instagram logo"></a>
-            <a href="https://www.x.com"><img src="images/footerlogo's/x_215px.svg" alt="X logo"></a>
-            <img src="images/footerlogo's/logoonuitgesproken_215px.svg" alt="Onuitgesproken logo">
-            <a href="https://www.spotify.com"><img src="images/footerlogo's/spotify_215px.svg" alt="Spotify logo"></a>
-            <a href="https://www.apple.com/apple-podcasts/"><img src="images/footerlogo's/Podcast_215px.svg"
-                    alt="Apple Podcast Logo"></a>
-        </div>
-        <div class="links">
-            <p>Contacteer ons via e-mail: <a href="mailto:info@onuitgesproken.nl">info@example.com</a></p>
-            <a class="bron" href="pages/bronnen.html">bronnnen</a>
-        </div>
-    </footer>
-</body>
+        </main>
+        <footer>
+            <!-- heb hier een div gebruikt voor de flexbox container van de images om ze netjes naast elkaar te zetten -->
+            <div>
+                <a href="https://www.instagram.com/"><img src="images/footerlogo's/instagram_215px.svg" alt="Instagram logo"></a>
+                <a href="https://www.x.com"><img src="images/footerlogo's/x_215px.svg" alt="X logo"></a>
+                <img src="images/footerlogo's/logoonuitgesproken_215px.svg" alt="Onuitgesproken logo">
+                <a href="https://www.spotify.com"><img src="images/footerlogo's/spotify_215px.svg" alt="Spotify logo"></a>
+                <a href="https://www.apple.com/apple-podcasts/"><img src="images/footerlogo's/Podcast_215px.svg"
+                        alt="Apple Podcast Logo"></a>
+            </div>
+            <!-- deze links konden niet in een section omdat het geen heading bevat -->
+            <div class="links">
+                <p>Contacteer ons via e-mail: <a href="mailto:info@onuitgesproken.nl">info@onuitgesproken.nl</a></p>
+                <a class="bron" href="pages/bronnen.html">bronnnen</a>
+            </div>
+        </footer>
+    </body>
 
 </html>
