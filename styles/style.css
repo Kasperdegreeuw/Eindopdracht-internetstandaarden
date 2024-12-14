@@ -336,6 +336,12 @@ h2 + p {
     margin-right: 5%;
 }
 
+.kaart img {
+    max-width: 10em;
+    max-height: 10em;
+    margin: 2em
+}
+
 .kaart {
     display: flex;
     flex-direction: row;
@@ -349,10 +355,6 @@ h2 + p {
     
 }
 
-.kaart img {
-    max-width: 10em;
-    max-height: 10em;
-}
 
 .intro {
     display: flex;
